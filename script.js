@@ -16,7 +16,7 @@ window.onload = () => {
         document.querySelector("html").style.backgroundColor = colors[Math.floor(Math.random() * 6)];
     }
     facts = updateTime(true);
-    document.querySelector("#fact").innerHTML = facts[Math.floor(Math.random() * 5)];
+    document.querySelector("#fact").innerHTML = facts[Math.floor(Math.random() * 6)];
 }
 
 // 9:07 20 dec
@@ -99,6 +99,7 @@ function updateTime(facts) {
             "That's " + (365 * y + 30 * mt + d).toString() + " days! 😲",
             "🍝",
             '"coke common"',
+            "Be Like Ahana Verma",
             "❤️❤️❤️"
         ]
     }
