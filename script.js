@@ -5,7 +5,7 @@ const colors = [
     '#6FC2EC',
     '#A2AAFF',
     '#C2BCE0',
-    '252525'
+    '#252525'
 ]
 
 window.onload = () => {
