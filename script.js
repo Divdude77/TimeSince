@@ -5,6 +5,7 @@ const colors = [
     '#6FC2EC',
     '#A2AAFF',
     '#C2BCE0',
+    '252525'
 ]
 
 window.onload = () => {
@@ -13,7 +14,7 @@ window.onload = () => {
         document.querySelector("html").style.backgroundSize = "250px";
     }
     else {
-        document.querySelector("html").style.backgroundColor = colors[Math.floor(Math.random() * 6)];
+        document.querySelector("html").style.backgroundColor = colors[Math.floor(Math.random() * 7)];
     }
     facts = updateTime(true);
     document.querySelector("#fact").innerHTML = facts[Math.floor(Math.random() * 6)];
