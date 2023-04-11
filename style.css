@@ -53,7 +53,6 @@ li > div > span {
 li > span {
     color: #ffffff90;
     font-size: 1.5vmax;
-    /* font-weight: 300; */
 }
 
 #fact {
@@ -71,6 +70,13 @@ li > span {
 }
 
 @media screen and (orientation: portrait) {
+    html {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
     #main-content {
         position: relative;
         transform: none;
