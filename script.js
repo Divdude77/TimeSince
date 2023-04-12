@@ -1,23 +1,55 @@
 const colors = [
-    '#FF7D91',
-    '#edba97',
-    '#92daba',
-    '#6FC2EC',
-    '#A2AAFF',
-    '#C2BCE0',
-    '#252525'
+    ['#FF7D91','#e05f72'],
+    ['#edba97','#daa079'],
+    ['#92daba','#79c1a0'],
+    ['#6FC2EC','#58add8'],
+    ['#A2AAFF','#7f88e8'],
+    ['#C2BCE0','#aea8d7'],
+    ['#252525','#3e3e3e']
 ]
 
 window.onload = () => {
-    if (Math.floor(Math.random() * 10) == 7) {
+    facts = updateTime(true);
+    
+    if (Math.floor(Math.random() * 20) == 7) {
         document.querySelector("html").style.background = "url('cooper.jpg')";
         document.querySelector("html").style.backgroundSize = "250px";
+        document.querySelector("#main-content").style.backgroundColor = "#0000009e";
+        color = ["","#c9292c"];
+        document.querySelector("#fact").innerHTML = "Send Cooper Pics";
     }
     else {
-        document.querySelector("html").style.backgroundColor = colors[Math.floor(Math.random() * 7)];
+        document.querySelector("#fact").innerHTML = facts[Math.floor(Math.random() * 5)];
+        color = colors[Math.floor(Math.random() * 7)]
+        document.querySelector("html").style.backgroundColor = color[0];
     }
-    facts = updateTime(true);
-    document.querySelector("#fact").innerHTML = facts[Math.floor(Math.random() * 6)];
+
+    document.querySelector("html").innerHTML += "<div class='heart'></div>".repeat(70);
+    hearts = document.querySelectorAll(".heart");
+    left = 2;
+    top = -10;
+    for (i = 0; i < hearts.length; i++) {
+       hearts[i].style.backgroundColor = color[1];
+    
+       if (Math.floor(Math.random() * 2)) {
+        hearts[i].style.transform = "rotate(-" + Math.floor(Math.random() * 360) + "deg)";
+       }
+       else {
+        hearts[i].style.transform = "rotate(" + Math.floor(Math.random() * 360) + "deg)";
+       }
+
+       hearts[i].style.left = left + "%";
+       if (left > 100) {
+        left = 0;
+       }
+       else {
+        left += Math.floor(3 + Math.random() * 5);
+       }
+       hearts[i].style.top = (-10 + Math.floor( Math.random() * -150)) + "%";
+       if (Math.floor(Math.random() * 3) == 2) {
+            hearts[i].style.zIndex = 2;
+       }
+    }
 }
 
 // 9:07 20 dec
@@ -100,7 +132,6 @@ function updateTime(facts) {
             "That's " + (365 * y + 30 * mt + d).toString() + " days! 😲",
             "🍝",
             '"coke common"',
-            "Be Like Ahana Verma",
             "❤️❤️❤️"
         ]
     }
