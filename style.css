@@ -4,6 +4,7 @@
 
 html {
     color: #ffffffc2;
+    overflow-x: hidden;
 }
 
 .heart {
