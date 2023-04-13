@@ -15,7 +15,7 @@ html {
     position: absolute;
     top: -15%;
     left: 0%;
-    animation: falling 10s linear;
+    animation: falling 15s linear;
 }
 
 .heart::before {
@@ -108,7 +108,7 @@ li > span {
 
 @keyframes falling {
     100% {
-        top: 170%;
+        top: 200%;
         transform: rotate(45deg);
     }
 }
