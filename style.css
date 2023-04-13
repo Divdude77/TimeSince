@@ -1,5 +1,6 @@
 * {
     font-family: 'Rubik', sans-serif;
+    text-align: center;
 }
 
 html {
@@ -59,6 +60,7 @@ html {
     column-gap: 7px;
     align-items: center;
     margin-top: -5px;
+    --number-size: 11vmax;
 }
 
 #clock li:nth-child(even) {
@@ -76,7 +78,7 @@ li {
 }
 
 li > div {
-    font-size: 12vmax;
+    font-size: var(--number-size);
     margin-bottom: -10px;
     font-weight: 500;
 }
@@ -116,7 +118,8 @@ li > span {
 
 @media screen and (orientation: portrait) {
     html {
-        height: 100%;
+        height: fit-content;
+        min-height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
