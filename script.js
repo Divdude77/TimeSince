@@ -15,6 +15,7 @@ window.onload = () => {
         document.querySelector("html").style.background = "url('cooper.jpg')";
         document.querySelector("html").style.backgroundSize = "250px";
         document.querySelector("#main-content").style.backgroundColor = "#0000009e";
+        document.querySelector("#fact").style.backgroundColor = "#0000009e";
         color = ["","#c9292c"];
         document.querySelector("#fact").innerHTML = "Send Cooper Pics";
     }
