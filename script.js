@@ -20,7 +20,7 @@ window.onload = () => {
         document.querySelector("#fact").innerHTML = "Send Cooper Pics";
     }
     else {
-        document.querySelector("#fact").innerHTML = facts[Math.floor(Math.random() * 5)];
+        document.querySelector("#fact").innerHTML = facts[Math.floor(Math.random() * 6)];
         color = colors[Math.floor(Math.random() * 7)]
         document.querySelector("html").style.backgroundColor = color[0];
     }
@@ -133,6 +133,7 @@ function updateTime(facts) {
             "That's " + (365 * y + 30 * mt + d).toString() + " days! 😲",
             "🍝",
             '"coke common"',
+            "Be Like Ahana Verma",
             "❤️❤️❤️"
         ]
     }
