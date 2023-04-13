@@ -121,10 +121,12 @@ function updateTime(facts) {
         document.querySelector("#years").classList.remove("not-yet");
         document.querySelector("#yearsColon").classList.remove("not-yet");
         document.querySelector("#yearsVal").innerHTML = y;
+        document.querySelector("#clock").style.setProperty('--number-size', '11vmax');
     }
     else {
         document.querySelector("#years").classList.add("not-yet");
         document.querySelector("#yearsColon").classList.add("not-yet");
+        document.querySelector("#clock").style.setProperty('--number-size', '12vmax');
     }
 
     if (facts) {
