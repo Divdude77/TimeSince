@@ -57,30 +57,18 @@ window.onload = () => {
 // = Jan 1 2023 + 10days + 53mins + 14hours
 
 function updateTime(facts) {
-    const dt = new Date();
-    y = dt.getFullYear() - 2023;
-    mt = dt.getMonth();
-    d = dt.getDate() + 10;
-    h = dt.getHours() + 14;
-    m = dt.getMinutes() + 53;
-    s = dt.getSeconds();
+    const itBegan = new Date("2022-12-20T05:07:00Z");
+    const currentDate = new Date();
 
-    if (m >= 60) {
-        m -= 60;
-        h += 1;
-    }
-    if (h >= 24) {
-        h -= 24;
-        d += 1;
-    }
-    if (d > 30) {
-        d -= 30;
-        m += 1;
-    }
-    if (mt >= 12) {
-        mt -= 12;
-        y += 1;
-    }
+    diff = currentDate - itBegan;
+
+    // Calculate the time elapsed in seconds, minutes, hours, days, months, and years
+    const y = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+    const mt = Math.floor((diff % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * 30.44));
+    const d = Math.floor((diff % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((diff % (1000 * 60)) / 1000);
 
     if (s < 10) {
         document.querySelector("#secondsVal").innerHTML = "<span>0</span>" + s.toString();
