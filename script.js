@@ -63,9 +63,9 @@ function updateTime(facts) {
     diff = currentDate - itBegan;
 
     // Calculate the time elapsed in seconds, minutes, hours, days, months, and years
-    const y = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
-    const mt = Math.floor((diff % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * 30.44));
-    const d = Math.floor((diff % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24));
+    const y = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+    const mt = Math.floor((diff % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30));
+    const d = Math.floor((diff % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
     const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const s = Math.floor((diff % (1000 * 60)) / 1000);
