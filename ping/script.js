@@ -9,7 +9,7 @@ function buttonPress() {
         document.querySelector("#button-shadow").classList.remove("pressed-shadow");
         }, 1000);
         
-        fetch("http://94.203.253.178:443/ping",  { mode: 'no-cors'});
+        fetch("http://94.203.253.178:443/ping",  { method: 'POST', mode: 'no-cors' });
     }
 }
 
